@@ -206,27 +206,25 @@ export default function ClayToolsRecommender() {
             Describe your workflow needs and AI will find the perfect tools
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-2 md:gap-4 mb-6">
-            <div className="flex-1 relative">
-              <div className="rounded-xl border-2 border-gray-200 focus-within:border-orange-300 p-4">
-                <span className="block pl-2 pb-2 text-sm md:text-lg select-none">
-                  Today, I want Clay to
-                </span>
-                <Textarea
-                  rows={4}
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  onKeyDown={handleKeyPress}
-                  placeholder="help me find qualified prospects for my startup"
-                  className="w-full text-sm md:text-lg border-none focus-visible:ring-0 focus-visible:ring-offset-0 resize-none"
-                  disabled={loading || toolsLoading}
-                />
-              </div>
+          <div className="space-y-4 mb-6">
+            <div className="rounded-xl border-2 border-gray-200 focus-within:border-orange-300 p-4">
+              <span className="block pl-2 pb-2 text-sm md:text-lg select-none">
+                Today, I want Clay to
+              </span>
+              <Textarea
+                rows={4}
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={handleKeyPress}
+                placeholder="help me find qualified prospects for my startup"
+                className="w-full text-sm md:text-lg border-none focus-visible:ring-0 focus-visible:ring-offset-0 resize-none"
+                disabled={loading || toolsLoading}
+              />
             </div>
             <Button
               onClick={handleSearch}
               disabled={loading || toolsLoading || !query.trim()}
-              className="w-full sm:w-auto px-4 py-3 sm:px-8 sm:py-6 text-base sm:text-lg rounded-xl bg-orange-500 hover:bg-orange-600 text-white"
+              className="w-full px-4 py-3 md:px-8 md:py-6 text-base md:text-lg rounded-xl bg-orange-500 hover:bg-orange-600 text-white"
             >
               <Search className="w-5 h-5 mr-2" />
               Search
