@@ -208,7 +208,7 @@ export default function ClayToolsRecommender() {
           <div className="flex gap-4 mb-6">
             <div className="flex-1 relative">
               <div className="flex items-center rounded-xl border-2 border-gray-200 focus-within:border-orange-300">
-                <span className="pl-6 text-lg whitespace-nowrap select-none">
+                <span className="pl-6 text-base md:text-lg whitespace-nowrap select-none">
                   Today, I want Clay to
                 </span>
                 <Input
@@ -216,7 +216,7 @@ export default function ClayToolsRecommender() {
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="help me find qualified prospects for my startup"
-                  className="flex-1 text-lg py-6 pl-2 pr-4 border-none focus:ring-0"
+                  className="flex-1 text-base md:text-lg py-4 md:py-6 pl-2 pr-4 border-none focus-visible:ring-0 focus-visible:ring-offset-0"
                   disabled={loading || toolsLoading}
                 />
               </div>
