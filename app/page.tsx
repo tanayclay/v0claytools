@@ -207,14 +207,19 @@ export default function ClayToolsRecommender() {
 
           <div className="flex gap-4 mb-6">
             <div className="flex-1 relative">
-              <Input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Today, I want Clay to help me find qualified prospects for my startup"
-                className="text-lg py-6 pl-6 pr-4 rounded-xl border-2 border-gray-200 focus:border-orange-300"
-                disabled={loading || toolsLoading}
-              />
+              <div className="flex items-center rounded-xl border-2 border-gray-200 focus-within:border-orange-300">
+                <span className="pl-6 text-sm sm:text-base md:text-lg whitespace-nowrap select-none">
+                  Today, I want Clay to
+                </span>
+                <Input
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="help me generate leads"
+                  className="flex-1 text-sm sm:text-base md:text-lg py-4 sm:py-5 md:py-6 pl-2 pr-4 border-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none"
+                  disabled={loading || toolsLoading}
+                />
+              </div>
             </div>
             <Button
               onClick={handleSearch}
