@@ -354,7 +354,7 @@ export default function ClayToolsRecommender() {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-gray-200">
           <p className="text-gray-600">
-            Made with ❤️ by <span className="font-semibold text-orange-500">Tanay</span> from{" "}
+            Made with ❤️ by <span className="font-semibold text-orange-500">Tanay M.</span> from{" "}
             <span className="font-semibold text-orange-500">Clay Bootcamp</span>
           </p>
         </div>
