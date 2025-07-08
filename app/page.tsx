@@ -28,7 +28,8 @@ interface Recommendation {
 }
 
 interface RecommendationResponse {
-  recommendations: Recommendation[]
+  recommendations?: Recommendation[]
+  message?: string
 }
 
 export default function ClayToolsRecommender() {
@@ -281,6 +282,16 @@ export default function ClayToolsRecommender() {
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No matching tools found</h3>
             <p className="text-gray-600">Try rephrasing your request or using different keywords.</p>
           </div>
+        )}
+
+        {/* Low Match Message */}
+        {recommendations && !loading && recommendations.message && (
+          <Alert className="mb-8 border-yellow-200 bg-yellow-50">
+            <AlertCircle className="h-4 w-4 text-yellow-600" />
+            <AlertDescription className="text-yellow-800">
+              {recommendations.message}
+            </AlertDescription>
+          </Alert>
         )}
 
         {/* Recommendations */}

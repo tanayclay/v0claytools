@@ -177,6 +177,18 @@ Analyze the user's request and recommend the most relevant tools.
 
     console.log("Valid recommendations:", validRecommendations.length)
 
+    const MIN_RELEVANCE = 0.3
+    const hasStrongMatch = validRecommendations.some(
+      (rec) => rec!.relevance_score >= MIN_RELEVANCE
+    )
+
+    if (validRecommendations.length === 0 || !hasStrongMatch) {
+      return Response.json({
+        message:
+          "Sorry we couldn't recommend a tool for this use case. You can submit your use case to tanay@claybootcamp.com or check out the whole list of tools at https://remarkable-lily-32f8dd.netlify.app/",
+      })
+    }
+
     return Response.json({ recommendations: validRecommendations })
   } catch (aiError) {
     console.error("OpenAI error:", aiError)
