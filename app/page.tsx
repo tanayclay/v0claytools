@@ -205,7 +205,7 @@ export default function ClayToolsRecommender() {
             Describe your workflow needs and AI will find the perfect tools
           </p>
 
-          <div className="flex gap-4 mb-6">
+          <div className="flex gap-2 md:gap-4 mb-6">
             <div className="flex-1 relative">
               <div className="flex items-center rounded-xl border-2 border-gray-200 focus-within:border-orange-300">
                 <span className="pl-6 text-sm md:text-lg whitespace-nowrap select-none">
@@ -224,7 +224,7 @@ export default function ClayToolsRecommender() {
             <Button
               onClick={handleSearch}
               disabled={loading || toolsLoading || !query.trim()}
-              className="px-8 py-6 text-lg rounded-xl bg-orange-500 hover:bg-orange-600 text-white"
+              className="px-4 py-3 text-base md:px-8 md:py-6 md:text-lg rounded-xl bg-orange-500 hover:bg-orange-600 text-white"
             >
               <Search className="w-5 h-5 mr-2" />
               Search
