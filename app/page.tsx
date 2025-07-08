@@ -354,8 +354,24 @@ export default function ClayToolsRecommender() {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-gray-200">
           <p className="text-gray-600">
-            Made with ❤️ by <span className="font-semibold text-orange-500">Tanay M.</span> from{" "}
-            <span className="font-semibold text-orange-500">Clay Bootcamp</span>
+            Made with ♥ by{' '}
+            <a
+              href="https://www.linkedin.com/in/tanay-mishra-ai-automation/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-orange-500"
+            >
+              Tanay
+            </a>{' '}
+            from{' '}
+            <a
+              href="https://www.claybootcamp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-orange-500"
+            >
+              Clay Bootcamp
+            </a>
           </p>
         </div>
       </div>
